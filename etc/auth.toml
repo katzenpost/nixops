@@ -1,0 +1,96 @@
+# Katzenpost non-voting authority configuration file.
+
+#
+# The Authority section contains mandatory information.
+#
+
+[Authority]
+
+  # Addresses are the IP address/port combinations that the authority will bind
+  # to for incoming connections.
+  Addresses = [ "0.0.0.0:29483", "[::]:29483" ]
+
+  # DataDir is the absolute path to the server's state files.
+  DataDir = "/var/lib/katzenpost-authority-nonvoting"
+
+#
+# The Logging section controls the logging.
+#
+
+[Logging]
+
+  # Disable disables logging entirely.
+  Disable = false
+
+  # File specifies the log file, if omitted stdout will be used.
+  # File = "/var/log/katzenpost.log"
+
+  # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
+  # `INFO` and `DEBUG`.
+  #
+  # Warning: The `DEBUG` log level is unsafe for production use.
+  Level = "DEBUG"
+
+#
+# The Parameters section holds the network parameters.
+#
+
+[Parameters]
+
+  # Lambda is the inverse of the mean of the exponential distribution that
+  # clients will use to sample delays.
+  Lambda = 0.00025
+
+  # MaxDelay is the maximum per-hop delay in milliseconds.
+  #
+  # If omitted, the MaxDelay will be derived from the 0.99999 quantile of
+  # of the exponential distribution.
+  MaxDelay = 90000
+
+  # LambdaP is the mean of the poisson distribution that clients will use
+  # to sample the send scheduling interval (seconds).
+  LambdaP = 15.0
+
+#
+# The Mixes array defines the list of white-listed non-provider nodes.
+#
+# IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64 format.
+
+[[Mixes]]
+  IdentityKey = "E9868B96BF0175A17EAB480891CDD9BD15B483544B766CA7577AEB3270EAAF97"
+
+[[Mixes]]
+  IdentityKey = "4DCF82B5298F394D1EE96DF7D8DA7BD1D3D43F264B5DD25461DD0D5BAC9EFAC6"
+
+[[Mixes]]
+  IdentityKey = "52D2D843CCD21C768C3840808A2A3603C68F2F72E4E51B5C132CB1287FB641A4"
+
+[[Mixes]]
+  IdentityKey = "97B381E732B0649A6F26D977E03627481858A35306A0A4BDCB258B80C3720F37"
+
+[[Mixes]]
+  IdentityKey = "32C08546DBF85F96E89816100B8531BDF06210EC58876939699156F375CAB960"
+
+[[Mixes]]
+  IdentityKey = "D01CE9A5FCA480F59EEBFF8EF14AF575D8EC19774BD83ABEB6BF3986B18A478D"
+
+#
+# The Providers array defines the list of white-listed Provider nodes.
+#
+# Identifier is the human readable provider identifier, such as a FQDN.
+# IdentityKey is the provider's EdDSA signing key, in either Base16 OR Base64 format.
+
+[[Providers]]
+
+  Identifier = "prov1.example.net"
+  IdentityKey = "0BE7992177E852E573A4AE0B9A3DCDD6D36DF733364D356F06AC006B8DE19383"
+
+[[Providers]]
+
+  Identifier = "prov2.example.net"
+  IdentityKey = "D0322ADC1F1AB666E2E4E8C62D3E28FEF392B6C584D4B2F94E563AC725AA442A"
+
+[[Providers]]
+
+  Identifier = "prov3.example.net"
+  IdentityKey = "70475AB61A30D81041780E76C51230FD762034A61CBC3BC0635650A1815D3B14"

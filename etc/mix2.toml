@@ -1,0 +1,53 @@
+# Katzenpost server configuration file.
+
+#
+# The Server section contains mandatory information common to all nodes.
+#
+
+[Server]
+
+  # Identifier is the human readable identifier for the node (eg: FQDN).
+  Identifier = "mix2.example.net"
+
+  # Addresses are the IP address/port combinations that the server will bind
+  # to for incoming connections.
+  Addresses = [ "[::]:29483" ]
+
+  # DataDir is the absolute path to the server's state files.
+  DataDir = "/var/lib/katzenpost-server"
+
+  # IsProvider specifies if the server is a provider (vs a mix).
+  IsProvider = false
+
+#
+# The PKI section contains the directory authority configuration.
+#
+
+[PKI]
+
+  # Nonvoting is a simple non-voting PKI for test deployments.
+  [PKI.Nonvoting]
+
+    # Address is the IP address/port combination of the directory authority.
+    Address = "10.233.2.2:29483"
+
+    # PublicKey is the directory authority's public key in Base64 or Base16 format.
+    PublicKey = "00B9DDF190504B6AD5C70EDD62A457FC5803278665936CF81BB0280AF0920FC5"
+
+#
+# The Logging section controls the logging.
+#
+
+[Logging]
+
+  # Disable disables logging entirely.
+  Disable = false
+
+  # File specifies the log file, if omitted stdout will be used.
+  # File = "/var/log/katzenpost.log"
+
+  # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
+  # `INFO` and `DEBUG`.
+  #
+  # Warning: The `DEBUG` log level is unsafe for production use.
+  Level = "DEBUG"
