@@ -8,7 +8,7 @@
 
   # Addresses are the IP address/port combinations that the authority will bind
   # to for incoming connections.
-  Addresses = [ "0.0.0.0:29483", "[::]:29483" ]
+  Addresses = [ [::]:29483" ]
 
   # DataDir is the absolute path to the server's state files.
   DataDir = "/var/lib/katzenpost-authority-nonvoting"
