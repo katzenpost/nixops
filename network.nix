@@ -106,4 +106,43 @@
     };
   };
 
+### MAILPROXIES
+
+  mail1a = { config, pkgs, ... }: {
+    environment.systemPackages = with pkgs; [  ];
+
+    services.katzenpost-server = {
+      enable = true;
+      config = builtins.readFile ./etc/mail1a.toml;
+    };
+  };
+
+  mail1b = { config, pkgs, ... }: {
+    environment.systemPackages = with pkgs; [  ];
+
+    services.katzenpost-server = {
+      enable = true;
+      config = builtins.readFile ./etc/mail1b.toml;
+    };
+  };
+
+
+  mail2a = { config, pkgs, ... }: {
+    environment.systemPackages = with pkgs; [  ];
+
+    services.katzenpost-server = {
+      enable = true;
+      config = builtins.readFile ./etc/mail2a.toml;
+    };
+  };
+
+  mail3a = { config, pkgs, ... }: {
+    environment.systemPackages = with pkgs; [  ];
+
+    services.katzenpost-server = {
+      enable = true;
+      config = builtins.readFile ./etc/mail3a.toml;
+    };
+  };
+
 }

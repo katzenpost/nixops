@@ -76,4 +76,34 @@
     };
   };
 
+### MAILPROXIES
+
+  mail1a = { config, pkgs, ... }: {
+    deployment = {
+      targetEnv = "container";
+      container.host = "localhost";
+    };
+  };
+
+  mail1b = { config, pkgs, ... }: {
+    deployment = {
+      targetEnv = "container";
+      container.host = "localhost";
+    };
+  };
+
+  mail2a = { config, pkgs, ... }: {
+    deployment = {
+      targetEnv = "container";
+      container.host = "localhost";
+    };
+  };
+
+  mail3a = { config, pkgs, ... }: {
+    deployment = {
+      targetEnv = "container";
+      container.host = "localhost";
+    };
+  };
+
 }
