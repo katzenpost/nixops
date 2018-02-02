@@ -29,7 +29,7 @@
   [PKI.Nonvoting]
 
     # Address is the IP address/port combination of the directory authority.
-    Address = "10.233.1.2:29483"
+    Address = "10.233.6.2:29483"
 
     # PublicKey is the directory authority's public key in Base64 or Base16 format.
     PublicKey = "00B9DDF190504B6AD5C70EDD62A457FC5803278665936CF81BB0280AF0920FC5"

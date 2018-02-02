@@ -43,7 +43,7 @@
   [NonvotingAuthority.TestAuthority]
 
     # Address is the IP address/port combination of the directory authority.
-    Address = "10.233.1.2:29483"
+    Address = "10.233.6.2:29483"
 
     # PublicKey is the directory authority's public key in Base64 or Base16
     # format.
